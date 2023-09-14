@@ -1,11 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Poppins:wght@300&family=Work+Sans:ital,wght@0,200;0,300;0,800;1,200;1,600&display=swap');
+:root {
+    --white-clr: white;
+    --black-clr: black;
+    --dark-clr: #212121;
+    --main-clr: #910000;
+}
+
 body {
-    background-color: #181b4fe3;
+    background-color: var(--dark-clr);
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    color: white;
+    color: var(--white-clr);
     font-family: 'Montserrat', sans-serif;
+}
+
+.mainimg {
+    width: 100%;
+    height: 45vh;
+    margin-bottom: 20px;
+}
+
+.captionmainImg {
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 45vh;
+    background: linear-gradient(290deg, rgba(85, 85, 85, 0.266) 0%, var(--dark-clr) 77%);
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.moviecaptionmainImg,
+.movieMainImg {
+    height: 35vh;
+}
+
+.more {
+    width: 200px !important;
+}
+
+.mainItem {
+    transition: all 0.3s ease-in-out 0s;
+    background-color: var(--dark-clr);
+    box-shadow: -5px 1px 20px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.mainItem img {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.mainItem:hover {
+    transform: translatey(-8px);
+}
+
+.button-mainItem {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 10%;
+    background: linear-gradient(30deg, rgb(80, 80, 80) 20%, rgba(223, 39, 2, 0.848) 80%);
+    transition: all 0.3s ease-in-out 0s;
+    box-shadow: rgba(193, 244, 246, 0.698) 0px 0px 0px 0px;
+    align-items: center;
+    border: 0;
+}
+
+.button-mainItem:is(:hover,
+ :focus) {
+    transform: scale(1.1);
+}
+
+.captionmainImg h3 {
+    color: #8f8f8f;
+}
+
+.playstore-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 19px;
+    background-color: black;
+    padding: 10px 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    outline: 0;
+    transition: all .2s ease;
+    text-decoration: none;
+}
+
+.playstore-button:hover {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+.icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.texts {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+.text-1 {
+    margin-bottom: 0.25rem;
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+
+.text-2 {
+    font-size: .8rem !important;
+    font-weight: 600;
+}
+
+.callusbtn {
+    background-color: #2e2e2ec3;
+}
+
+.container {
+    width: 80%;
 }
 
 .container-LogIn {
@@ -14,41 +144,13 @@ body {
     margin: auto;
 }
 
-#shadow {
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 3px 3px 30px #959fba;
-    background-color: #212529e7;
+.bg-danger {
+    background-color: var(--main-clr) !important;
 }
 
-@media screen and (max-width:750px) {
-    .container-LogIn {
-        width: 95% !important;
-    }
-    #shadow {
-        padding: 25px;
-    }
-}
-
-input,
-textarea {
-    color: white !important;
-    background-color: #ffffff3d !important;
-}
-
-footer {
-    text-align: center;
-    font-size: 11px;
-    background-color: #212529;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 15px 0;
-}
-
-footer p {
-    margin: 0;
+.populer {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.46);
 }
 
 ::placeholder {
@@ -57,36 +159,59 @@ footer p {
 }
 
 .nav-item a {
+    position: relative;
     cursor: pointer;
+}
+
+.navbar-dark {
+    background-color: var(--dark-clr) !important;
 }
 
 .content {
     height: 100% !important;
-    border-top: 2px solid rgba(208, 207, 207, 0.355);
-    border-bottom: 2px solid rgba(208, 207, 207, 0.355);
     padding: 50px 25px;
     border-radius: 40px;
+    height: 254px;
+    border-radius: 30px;
+    background: var(--dark-clr);
+    box-shadow: 5px 5px 10px rgb(25, 25, 25), -10px -1px 30px rgb(60, 60, 60);
 }
 
 .caption {
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.578);
+    background-image: linear-gradient(163deg, #3e39393d 0%, #000000e2 100%);
     padding: 20px;
     transition: .7s all;
+    flex-direction: column;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    opacity: 0;
+}
+
+.caption p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.caption .play {
+    transition: .7s all;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
 
 .item-text:hover .caption {
-    top: 0;
+    opacity: 1;
 }
 
 .item-text img {
@@ -98,10 +223,19 @@ footer p {
 }
 
 .vote {
-    padding: 5px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 5px;
+}
+
+.view {
+    position: absolute;
+    top: 30px;
+    right: 5px;
+}
+
+.vote {
+    font-size: 12px;
 }
 
 .loader {
@@ -173,4 +307,344 @@ footer p {
 
 .nav-item p {
     cursor: pointer;
+}
+
+.carousel-item img {
+    height: 350px;
+    border-radius: 20px;
+}
+
+.captionCarsouel {
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.626);
+    transition: .7s all;
+}
+
+.captionCarsouel img {
+    margin: 20px;
+    width: 90%;
+    height: 250px;
+}
+
+.captionCarsouel p {
+    color: #d9d9d9ea;
+    font-size: 14px;
+}
+
+.carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+}
+
+.details {
+    background-color: #232323ac;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+}
+
+.bg-page {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--dark-clr);
+    box-shadow: 1px 1px 10px black;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+
+.value {
+    background-color: transparent;
+    border: none;
+    padding: 20px;
+    color: white;
+    display: flex;
+    position: relative;
+    gap: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .2s ease-in all;
+}
+
+.value:not(:active):hover,
+.value:focus {
+    background-color: #21262C;
+}
+
+.value:focus,
+.value:active {
+    background-color: #1A1F24;
+    outline: none;
+}
+
+.value::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    width: 5px;
+    height: 80%;
+    background-color: var(--main-clr);
+    border-radius: 5px;
+    opacity: 0;
+}
+
+.value:focus::before,
+.value:active::before {
+    opacity: 1;
+}
+
+.value svg {
+    width: 15px;
+    margin: 5px;
+}
+
+.search {
+    margin: 10px 0;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgb(104, 104, 104);
+}
+
+.search input {
+    padding-left: 20px;
+    border: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 90%;
+    background-color: transparent !important;
+}
+
+::placeholder {
+    color: #cecece !important;
+}
+
+.search button {
+    padding: 5px;
+    background-color: #2b2b2b;
+    color: white;
+    border: transparent;
+    border-radius: 15px;
+    width: 10%;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+    .search input {
+        width: 60%;
+    }
+    .search button {
+        width: 40%;
+        font-size: 16px;
+    }
+    .container {
+        width: 95%;
+    }
+    .type::after {
+        content: 'Watch Now' !important;
+    }
+    .carousel-item .col-md-8 {
+        display: none;
+    }
+    .playstore-button .text-1 {
+        font-size: .6rem;
+    }
+    .playstore-button svg {
+        width: 18px;
+    }
+    .playstore-button .text-2 {
+        font-size: .7rem !important;
+    }
+    .playstore-button {
+        padding: 5px 8px;
+        border-radius: 10px;
+    }
+}
+
+.type::after {
+    color: rgb(255, 255, 255);
+    content: "|";
+    animation: 10s typing infinite;
+}
+
+@keyframes typing {
+    0% {
+        content: "W|";
+    }
+    2% {
+        content: 'Wa|';
+    }
+    4% {
+        content: 'Wat|';
+    }
+    6% {
+        content: 'Watc|';
+    }
+    8% {
+        content: 'Watch|';
+    }
+    10% {
+        content: 'Watch |';
+    }
+    12% {
+        content: 'Watch t|';
+    }
+    14% {
+        content: 'Watch th|';
+    }
+    16% {
+        content: 'Watch the|';
+    }
+    18% {
+        content: 'Watch the |';
+    }
+    20% {
+        content: 'Watch the m|';
+    }
+    22% {
+        content: 'Watch the mo|';
+    }
+    24% {
+        content: 'Watch the mos|';
+    }
+    26% {
+        content: 'Watch the most|';
+    }
+    28% {
+        content: 'Watch the most |';
+    }
+    30% {
+        content: 'Watch the most a|';
+    }
+    32% {
+        content: 'Watch the most am|';
+    }
+    34% {
+        content: 'Watch the most ama|';
+    }
+    36% {
+        content: 'Watch the most amaz|';
+    }
+    38% {
+        content: 'Watch the most amazi|';
+    }
+    40% {
+        content: 'Watch the most amazin|';
+    }
+    42% {
+        content: 'Watch the most amazing|';
+    }
+    44% {
+        content: 'Watch the most amazing |';
+    }
+    46% {
+        content: 'Watch the most amazing m|';
+    }
+    48% {
+        content: 'Watch the most amazing mo|';
+    }
+    50% {
+        content: 'Watch the most amazing mov|';
+    }
+    52% {
+        content: 'Watch the most amazing movi|';
+    }
+    54% {
+        content: 'Watch the most amazing movie|';
+    }
+    56% {
+        content: 'Watch the most amazing movies|';
+    }
+    58% {
+        content: 'Watch the most amazing movies |';
+    }
+    60% {
+        content: 'Watch the most amazing movies a|';
+    }
+    62% {
+        content: 'Watch the most amazing movies an|';
+    }
+    64% {
+        content: 'Watch the most amazing movies and|';
+    }
+    66% {
+        content: 'Watch the most amazing movies and |';
+    }
+    68% {
+        content: 'Watch the most amazing movies and T|';
+    }
+    70% {
+        content: 'Watch the most amazing movies and TV|';
+    }
+    72% {
+        content: 'Watch the most amazing movies and TV |';
+    }
+    74% {
+        content: 'Watch the most amazing movies and TV s|';
+    }
+    76% {
+        content: 'Watch the most amazing movies and TV sh|';
+    }
+    78% {
+        content: 'Watch the most amazing movies and TV sho|';
+    }
+    80% {
+        content: 'Watch the most amazing movies and TV show|';
+    }
+    82% {
+        content: 'Watch the most amazing movies and TV shows|';
+    }
+    84% {
+        content: '|';
+    }
+    86% {
+        content: 'F|';
+    }
+    88% {
+        content: 'FO|';
+    }
+    90% {
+        content: 'FOL|';
+    }
+    92% {
+        content: 'FOLL|';
+    }
+    94% {
+        content: 'FOLLO|';
+    }
+    96% {
+        content: 'FOLLOW|';
+    }
+    98% {
+        content: 'FOLLOW |';
+    }
+    100% {
+        content: 'FOLLOW US|';
+    }
 }

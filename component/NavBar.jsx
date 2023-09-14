@@ -28,30 +28,24 @@ export default function Navbar(props) {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link href="" className="nav-link">
+                <Link href="/" className="nav-link">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="" className="nav-link">
+                <Link href="/movies" className="nav-link">
                   Movies
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="" className="nav-link">
+                <Link href="/tv" className="nav-link">
                   TvShows
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link href="" className="nav-link">
+                <Link href="/people" className="nav-link">
                   People
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link href="" className="nav-link">
-                  Contact
                 </Link>
               </li>
             </ul>
@@ -60,14 +54,15 @@ export default function Navbar(props) {
               <>
                 {" "}
                 <li className="nav-item">
-                  <p className="nav-link m-0 text-uppercase text-white">
-                    ooooooh
-                  </p>
-                </li>
-                <li className="nav-item">
-                  <p className="m-0 nav-link text-bg-primary text-center bg-opacity-25 rounded-3 p-2">
-                    Log Out
-                  </p>
+                  <a
+                    href="https://amr-sabry1.github.io/MyPortfolio/"
+                    className="text-decoration-none"
+                    target="_blank"
+                  >
+                    <p className="nav-link m-0 text-uppercase text-white">
+                      Amr Sabry
+                    </p>
+                  </a>
                 </li>
               </>
             </ul>
