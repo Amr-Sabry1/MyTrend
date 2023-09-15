@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./NavBar";
-import Footer from "@/component/footer";
+import Footer from "@/component/Footer";
 
 export default function LayOut(props) {
   return (
