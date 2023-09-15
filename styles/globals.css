@@ -492,6 +492,16 @@ body {
     .search input {
         width: 60%;
     }
+    .mainItem img {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+    }
+    .bg-page {
+        height: 135vh;
+    }
+    .details {
+        height: 135vh;
+    }
     .search button {
         width: 40%;
         font-size: 16px;

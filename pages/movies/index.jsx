@@ -64,7 +64,7 @@ export default function Home() {
               </div>
             </div>
             <div className="row">
-              <div className="col-md-3">
+              <div className="col-md-3 mb-3">
                 <div class="input">
                   <button class="value" onClick={() => shangeType("popular")}>
                     <svg

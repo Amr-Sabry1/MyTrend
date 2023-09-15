@@ -20,11 +20,11 @@ export default function Item({ data, type }) {
                 />
               </div>
               <div className="col-md-8">
-                <div className="m-2">
+                <div className="m-4">
                   <h5>{data?.title?.split(" ").splice(0, 3).join(" ")}</h5>
                   <h5>{data?.name}</h5>
                   <p>{data.release_date}</p>
-                  <p>{data.overview.split(" ").splice(0, 7).join(" ")}...</p>
+                  <p>{data.overview.split(" ").splice(0, 15).join(" ")}...</p>
                   <div className="d-flex">
                     <button class="button-mainItem">
                       <svg
