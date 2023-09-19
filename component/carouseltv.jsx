@@ -19,7 +19,11 @@ export default function Home() {
   }, []);
   return (
     <>
-      <div id="carouselExampleIndicators" class="carousel slide  my-3">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide  my-3"
+        data-bs-ride="carousel"
+      >
         <div class="carousel-indicators">
           <button
             type="button"
